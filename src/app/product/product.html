@@ -1,0 +1,34 @@
+<div class="p-5">
+    <table class="table border">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Selected</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(p of products; track p){
+            <tr>
+                <td>{{p.id}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.price}}</td>
+                <td>
+                    @if(p.selected){
+                    <i class="bi bi-check-square-fill" (click)="handleSelected(p)"></i>
+                    } @else {
+                    <i class="bi bi-square" (click)="handleSelected(p)"></i>
+                    }
+                </td>
+                <td>
+                    <button class="btn btn-outline-primary" (click)="handleDelete(p)">
+                        <i class="bi bi-trash3"></i>
+                    </button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
