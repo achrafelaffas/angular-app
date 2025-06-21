@@ -16,7 +16,7 @@
                 <td>{{p.name}}</td>
                 <td>{{p.price}}</td>
                 <td>
-                    @if(p.selected){
+                    @if(p.selected) {
                     <i class="bi bi-check-square-fill" (click)="handleSelected(p)"></i>
                     } @else {
                     <i class="bi bi-square" (click)="handleSelected(p)"></i>
